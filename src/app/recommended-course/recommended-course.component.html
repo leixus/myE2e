@@ -1,0 +1,69 @@
+<h2>经典推荐</h2>
+<div nz-row>
+  <div nz-col nzSpan="24" style="padding: 0 10px;">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let data of imgNzVertical">
+                <img [src]="data" alt="" width="100%">
+            </div>
+        </div>
+        
+        <div class="swiper-pagination"></div>
+        
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</div>
+
+<h3 class="types-title">
+  <!-- <span class="tit-icon icon-shizhan-l tit-icon-l"></span> -->
+  <!--<i nz-icon class="tit-icon" [nzType]="'smile'" [nzTheme]="'outline'"></i>-->
+  <span class="tit-icon-small icon iconfont icon-tubiaozhizuomoban4"></span>
+  <span class="tit-icon icon iconfont icon-tubiaozhizuomoban1"></span>
+  <em>实</em>／
+  <em>战</em>／
+  <em>推</em>／
+  <em>荐</em>
+  <!-- <span class="tit-icon icon-shizhan-r tit-icon-r"></span> -->
+  <!--<i nz-icon class="tit-icon" [nzType]="'smile'" [nzTheme]="'outline'" [nzRotate]="180"></i>-->
+  <span class="tit-icon icon iconfont icon-tubiaozhizuomoban1"></span>
+  <span class="tit-icon-small icon iconfont icon-tubiaozhizuomoban4"></span>
+</h3>
+
+<div nz-row>
+  <div nz-col nzSpan="24" style="padding: 0 10px;">
+    <div class="flexBox">
+      <app-full-course class="childBox"
+                       *ngFor="let item of imgRecommended; let imgIndex = index;"
+                       [coursesImg]="item">
+      </app-full-course>
+    </div>
+  </div>
+</div>
+
+<h3 class="types-title">
+  <!-- <span class="tit-icon icon-shizhan-l tit-icon-l"></span> -->
+  <!--<i nz-icon class="tit-icon" [nzType]="'smile'" [nzTheme]="'outline'"></i>-->
+  <span class="tit-icon-small icon iconfont icon-tubiaozhizuomoban-fuben2"></span>
+  <span class="tit-icon icon iconfont icon-tubiaozhizuomoban3"></span>
+  <em>新</em>／
+  <em>上</em>／
+  <em>好</em>／
+  <em>课</em>
+  <!-- <span class="tit-icon icon-shizhan-r tit-icon-r"></span> -->
+  <!--<i nz-icon class="tit-icon" [nzType]="'smile'" [nzTheme]="'outline'" [nzRotate]="180"></i>-->
+  <span class="tit-icon icon iconfont icon-tubiaozhizuomoban3"></span>
+  <span class="tit-icon-small icon iconfont icon-tubiaozhizuomoban-fuben2"></span>
+</h3>
+
+<div nz-row>
+  <div nz-col nzSpan="24" style="padding: 0 10px;">
+    <div class="flexBox">
+      <app-full-course class="childBox"
+                       *ngFor="let item of imgRecommededNew; let imgIndex = index;"
+                       [coursesImg]="item">
+      </app-full-course>
+    </div>
+  </div>
+</div>

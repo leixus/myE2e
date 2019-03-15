@@ -1,0 +1,20 @@
+.select_input_padding {
+    padding: 5px 20px 5px 0;
+}
+
+.a_algin {
+    text-align: center;
+    padding-top: 12px;
+}
+
+.a_select, .a_reset {
+    text-decoration: underline;    
+}
+
+.a_select {
+    margin-left: -10px;
+}
+
+.a_reset {
+    margin-left: 20px;
+}

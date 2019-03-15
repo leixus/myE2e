@@ -1,0 +1,32 @@
+import { Component, EventEmitter, OnInit, OnDestroy, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Subscription } from 'rxjs';
+
+@Component({
+  selector: 'app-input-search',
+  templateUrl: './input-search.component.html',
+  styleUrls: ['./input-search.component.scss']
+})
+export class InputSearchComponent implements OnInit, OnDestroy {
+
+  @Output() formChange = new EventEmitter<string>();
+  searchForm: FormGroup;
+  subscriptions: Subscription[];
+
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit() {
+    this.searchForm = this.fb.group({
+      search: ['']
+    });
+
+    this.subscriptions = [
+      this.searchForm.controls.search.valueChanges.subscribe(value => this.formChange.emit(value))
+    ];
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.forEach(s => s.unsubscribe());
+  }
+
+}

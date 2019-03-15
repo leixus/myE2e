@@ -1,0 +1,16 @@
+
+.registerFormFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    background-image: url('/assets/api/images/background/718.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+[nz-form] {
+    min-width: 600px;
+}

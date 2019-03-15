@@ -1,0 +1,22 @@
+.course-img {
+    width: 100%;
+    height: 148px;
+    border-radius: 10px;
+}
+
+.courses-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    max-height: 48px;
+    margin-top: 16px;
+    transition: .3s all linear;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: -o-ellipsis-lastline;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #2b333b;
+}

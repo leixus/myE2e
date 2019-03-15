@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import "./assets/font-face/iconfont.css";
+@import '~normalize.css/normalize';
+@import '~blueprint-css/src/blueprint';
+@import './assets/styles/_config';
+@import './assets/styles/_colors';
+@import './assets/styles/_typography';
+@import './assets/styles/_layout';
+@import './assets/styles/_nav';
+@import './assets/styles/components/_loaders';
+@import './assets/styles/components/_buttons';
+@import './assets/styles/components/_card';
+//@import './assets/styles/components/_inputs';
+@import './assets/styles/components/_modal';
+@import './assets/styles/_sprites';

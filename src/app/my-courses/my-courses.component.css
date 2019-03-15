@@ -1,0 +1,27 @@
+[nz-carousel-content] {
+    text-align: center;
+    width: 100%; 
+    height: 318px;
+    background: #364d79;
+    color: #fff;
+    overflow: hidden;
+}
+
+[nz-carousel-content] img {
+    width: 100%; 
+    height: 100%;
+}
+
+h3 {
+    color: #fff;
+}
+
+:host ::ng-deep .ant-tag-checkable-checked {
+    background: #545c63;
+    color: #fff;
+    padding: 3px 20px;
+    height: 27px;
+    line-height: 19px;
+    margin-right: 15px;
+    border-radius: 15px;
+}

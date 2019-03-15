@@ -1,0 +1,81 @@
+<nz-layout class="layout">
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item>nav 1</li>
+      <li nz-menu-item>nav 2</li>
+      <li nz-menu-item>nav 3</li>
+    </ul>
+    <nz-avatar class="userAdmin" 
+      nzIcon="user" 
+      nzSrc="/assets/api/images/user/admin.jpg"
+      title="leixus"
+      nz-popover 
+      nzTitle="设置" 
+      [nzContent]="userAdminInformation" 
+      nzPlacement="bottomRight">
+    </nz-avatar>
+    <ng-template #userAdminInformation>
+      <div>
+        <div class="settingUserAdmin"><a>个人信息</a></div>
+        <div class="settingUserAdmin"><a>帮助与反馈</a></div>
+        <div class="settingUserAdmin"><a>我的订单</a></div>
+        <div class="settingUserAdmin"><a>我的钱包</a></div>
+        <div class="settingUserAdmin"><a>购物车</a></div>
+        <div (click)="signOut()" class="settingUserAdmin"><a>退出登陆</a></div>
+      </div>
+    </ng-template>
+  </nz-header>
+  <nz-content style="padding:0 50px; height: 100%;">
+    <nz-breadcrumb style="margin:16px 0;">
+      <!-- <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+      <nz-breadcrumb-item>List</nz-breadcrumb-item>
+      <nz-breadcrumb-item>App</nz-breadcrumb-item> -->
+    </nz-breadcrumb>
+    <nz-layout style="padding:24px 0; background: #fff">
+      <nz-sider [nzWidth]="200" style="background:#fff">
+        <ul nz-menu [nzMode]="'inline'" style="height:100%">
+          <li nz-menu-item routerLinkActive="active">
+            <a [routerLink]="['/homes']">
+                <span>主页</span>
+            </a>
+          </li>
+          <li nz-submenu [nzOpen]="'true'">
+            <span title><i nz-icon type="user"></i>智能云数据</span>
+            <ul>
+              <li style="display: none;" nz-menu-item routerLinkActive="active">
+                <a [routerLink]="['/datatable']">
+                    <span>数据云管理</span>
+                </a>
+              </li>
+              <li style="display: none;" nz-menu-item routerLinkActive="active">
+                <a [routerLink]="['/recommended']">
+                    <span>推荐课程</span>
+                </a>
+              </li>
+              <li style="display: none;" nz-menu-item routerLinkActive="active">
+                <a [routerLink]="['/courses']">
+                    <span>所有课程</span>
+                </a>
+              </li>
+              <li style="display: none;" nz-menu-item routerLinkActive="active">
+                <a [routerLink]="['/shoping']">
+                    <span>购物订单</span>
+                </a>
+              </li>
+              <li nz-menu-item routerLinkActive="active">
+                <a [routerLink]="['/pokemon']">
+                  <span>宠物小精灵</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nz-sider>
+      <nz-content style="padding: 0 24px; ">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+    <nz-footer style="text-align: center;">leixus ©2019 Implement By Angular</nz-footer>
+  </nz-content>
+</nz-layout>

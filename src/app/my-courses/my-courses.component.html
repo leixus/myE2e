@@ -1,0 +1,39 @@
+<!-- <div nz-row>
+  <div nz-col nzSpan="24" style="padding: 0 10px;">
+    <nz-carousel style="width: 100%; height: 318px;" [nzEffect]="effect">
+      <div nz-carousel-content *ngFor="let index of imgNzVertical">
+        <img [src]=index alt="" />
+      </div>
+    </nz-carousel>
+  </div>
+</div>
+<br> -->
+
+<h2 style="margin-top: 20px;">搜索学习课程</h2>
+<div nz-row>
+  <div nz-col nzSpan="24" style="padding: 0 10px;">
+    <app-input-search (formChange)="search($event)"></app-input-search>
+  </div>
+</div>
+
+<div nz-row style="margin-top: 10px;">
+  <div nz-col nzSpan="24" style="padding: 10px;">
+    <nz-tag nzMode="checkable" [nzChecked]="true" (nzCheckedChange)="checkChange($event)">默认排序</nz-tag>
+    <nz-tag nzMode="checkable" [nzChecked]="false" (nzCheckedChange)="checkChange($event)">最新</nz-tag>
+    <nz-tag nzMode="checkable" [nzChecked]="false" (nzCheckedChange)="checkChange($event)">销量</nz-tag>
+    <nz-tag nzMode="checkable" [nzChecked]="false" (nzCheckedChange)="checkChange($event)">评价</nz-tag>
+  </div>
+</div>
+
+<div nz-row style="margin-top: 10px;">
+  <div nz-col nzSpan="24" style="padding: 10px;">
+    <app-full-course nz-col nzSpan="6" 
+      *ngFor="let item of allCoursesImg; let imgIndex = index;" 
+      [coursesImg]="item" 
+      style="padding-right: 15px; margin-bottom: 15px;">
+    </app-full-course>
+  </div>
+</div>
+
+
+

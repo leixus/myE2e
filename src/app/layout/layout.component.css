@@ -1,0 +1,38 @@
+.logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(255,255,255,.2);
+    margin: 16px 28px 16px 0;
+    float: left;
+}
+
+.userAdmin {
+    background: rgba(255,255,255,.2);
+    position: absolute;
+    right: 52px;
+    top: 15px;
+}
+
+.userAdmin：hover {
+    cursor: pointer;
+}
+
+:host ::ng-deep .ant-popover-inner-content{
+    padding: 0;
+}
+
+.settingUserAdmin {
+    height: 30px;
+    padding-left: 45px;
+    padding-top: 5px;
+}
+
+.settingUserAdmin:hover {
+    cursor: pointer;
+    background-color: rgba(170, 155, 155, 0.2);
+}
+
+/* .settingUserAdmin a {
+    
+} */
+
